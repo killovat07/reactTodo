@@ -28,7 +28,7 @@ export default class App extends Component {
 
         return {
           todoData: newArray
-        };
+        }; asfasfas
     })
   };
  
