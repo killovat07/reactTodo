@@ -1,3 +1,6 @@
-.btn-primary{
+.item-add-form{
     margin-top: 20px;
+}
+.item-add-form input{
+    margin-right: 5px;
 }
