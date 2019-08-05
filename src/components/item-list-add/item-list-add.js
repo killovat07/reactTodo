@@ -4,20 +4,14 @@ import './item-list-add.css';
 
 export default class ItemListAdd extends Component {
 
-  state = {
-    done: false,
-    important: false
-  };
-
   render() {
-    const { label, onDeleted } = this.props;
-    const { done, important } = this.state;
+    const { onAddItem } = this.props;
 
     return (
         <button type="button"
-                className="btn btn-outline-danger btn-sm float-right"
-                onClick={onDeleted}>
-          <i className="fa fa-trash-o" />
+                className="btn btn-primary btn-lg float-right"
+                onClick={ () => onAddItem('Hello world') }>
+          <i className="fa fa-plus" />
         </button>
     );
   };
