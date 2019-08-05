@@ -91,30 +91,6 @@ export default class App extends Component {
     });
   };
 
-  onFilterActive = (id) => {
-    this.setState(({ todoData }) => {
-      const filterData = todoData.filter((el) => el.done);
-      const newItem = filterData.map(el => this.createTodoItem(el.label));
-   
-      return {
-        todoData: newItem
-      };
- 
-    });
-  }
-  onFilterDone = (id) => {
-    
-    this.setState(({ todoData }) => {
-      const filterData = todoData.filter((el) => el.done);
-      const newItem = filterData.map(el => this.createTodoItem(el.label));
-   
-      return {
-        todoData: newItem
-      };
- 
-    });
-  }
-
   filterSearch = (term) => {
     this.setState({term})
   };
@@ -139,8 +115,7 @@ export default class App extends Component {
         <AppHeader toDo={todoCount} done={doneCount} />
         <div className="top-panel d-flex">
           <SearchPanel filterSearch={ this.filterSearch }/>
-          <ItemStatusFilter onFilterActive={ this.onFilterActive }
-          onFilterDone={ this.onFilterDone } />
+          <ItemStatusFilter />
         </div>
 
         <TodoList todos={visibleItems} 
