@@ -1,13 +1,27 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import './search-panel.css';
 
-const SearchPanel = () => {
-  return (
-    <input type="text"
-              className="form-control search-input"
-              placeholder="type to search" />
-  );
-};
+export default class SearchPanel extends Component {
+  state = {
+    label: ''
+  };
 
-export default SearchPanel;
+  onLabelChange = (e) => {
+    this.props.onAddItem('asf');
+    this.setState({
+      label: e.target.value.toUpperCase()
+    });
+  };
+
+  render() {
+
+      return (
+        <input type="text"
+                  className="form-control search-input"
+                  placeholder="type to search"
+                  onChange={ this.onLabelChange }
+                  value={ this.state.label } />
+      );
+  }
+}
