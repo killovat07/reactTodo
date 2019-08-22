@@ -1,0 +1,33 @@
+.todo-app {
+    margin: 2rem auto 0 auto;
+    max-width: 400px;
+}
+h1{
+    margin-bottom: 40px;
+}
+.todo-list-item button {
+    width: 35px;
+    margin: 3px;
+}
+.todo-list-item {
+    font-size: 1.25rem;
+}
+.todo-list-item-label {
+    line-height: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.list-group{
+    margin: 20px 0;
+}
+.item-add-form{
+    width: 100%;
+}
+.top-panel input, .item-add-form input{
+    flex: 1;
+    margin-right: 10px;
+    padding-left: 10px;
+}
